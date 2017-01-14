@@ -1,0 +1,17 @@
+{
+  "name": "mnvx/unoconv",
+  "license": "MIT",
+  "type": "project",
+  "description": "Unoconv wrapper for PHP",
+  "autoload": {
+    "psr-4": { "": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "Tests\\": "tests/" }
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "symfony/process": "^3.2",
+    "psr/log": "^1.0"
+  }
+}
