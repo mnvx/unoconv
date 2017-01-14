@@ -20,7 +20,7 @@ $filename = __DIR__ . '/data/html.html';
 $converter = new Converter();
 $parameters = (new UnoconvParameters())
     ->setInputFile($filename)
-    ->setOutputFormat(Format::FORMAT_TEXT_TXT);
+    ->setOutputFormat(Format::FORMAT_TEXT_TEXT);
 
 $result = $converter->convert($parameters);
 
