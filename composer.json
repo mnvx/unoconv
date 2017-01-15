@@ -6,10 +6,9 @@
   "keywords": ["unoconv"],
   "homepage": "https://github.com/mnvx/unoconv",
   "autoload": {
-    "psr-4": { "": "src/" }
-  },
-  "autoload-dev": {
-    "psr-4": { "Tests\\": "tests/" }
+    "psr-4": {
+      "Mnvx\\Unoconv\\": "src/"
+    }
   },
   "require": {
     "php": ">=7.0.0",

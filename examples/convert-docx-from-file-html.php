@@ -11,9 +11,9 @@ error_reporting(E_ALL);
 
 // Example start
 
-use Unoconv\Converter;
-use Unoconv\UnoconvParameters;
-use Unoconv\Format;
+use Mnvx\Unoconv\Converter;
+use Mnvx\Unoconv\UnoconvParameters;
+use Mnvx\Unoconv\Format;
 
 $converter = new Converter();
 $parameters = (new UnoconvParameters())

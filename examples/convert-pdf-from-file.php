@@ -11,9 +11,9 @@ require __DIR__ . '/Logger.php';
 
 // Example start
 
-use Unoconv\Converter;
-use Unoconv\UnoconvParameters;
-use Unoconv\Format;
+use Mnvx\Unoconv\Converter;
+use Mnvx\Unoconv\UnoconvParameters;
+use Mnvx\Unoconv\Format;
 
 $converter = new Converter();
 $converter->setLogger(new Logger());

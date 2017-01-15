@@ -1,6 +1,6 @@
 <?php
 
-namespace Unoconv;
+namespace Mnvx\Unoconv;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\LoggerAwareTrait;

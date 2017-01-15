@@ -11,9 +11,9 @@ require __DIR__ . '/Logger.php';
 
 // Example start
 
-use Unoconv\Converter;
-use Unoconv\UnoconvParameters;
-use Unoconv\Format;
+use Mnvx\Unoconv\Converter;
+use Mnvx\Unoconv\UnoconvParameters;
+use Mnvx\Unoconv\Format;
 
 $source = file_get_contents(__DIR__ . '/data/html.html');
 

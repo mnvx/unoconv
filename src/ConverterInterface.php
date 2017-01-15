@@ -1,6 +1,6 @@
 <?php
 
-namespace Unoconv;
+namespace Mnvx\Unoconv;
 
 interface ConverterInterface
 {
