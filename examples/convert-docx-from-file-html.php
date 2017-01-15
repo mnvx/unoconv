@@ -17,13 +17,13 @@ use Unoconv\Format;
 
 $converter = new Converter();
 $parameters = (new UnoconvParameters())
-    ->setInputFile(__DIR__ . '/data/html.html')
-    ->setOutputFormat(Format::FORMAT_TEXT_TEXT);
+    ->setInputFile(__DIR__ . '/data/docx.docx')
+    ->setOutputFile(__DIR__ . '/output/docx-to-html.html')
+    ->setOutputFormat(Format::FORMAT_WEB_HTML);
 
-$result = $converter->convert($parameters);
+$converter->convert($parameters);
 
 // Example finish
 
 
-$html = '<pre>' . $result . '</pre>';
-include __DIR__ . '/layout/layout.html';
+include __DIR__ . '/output/docx-to-html.html';

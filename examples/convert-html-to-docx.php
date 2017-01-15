@@ -25,12 +25,13 @@ $converter->setLogger(new Logger());
 
 $parameters = (new UnoconvParameters())
     ->setInputStream($source)
-    ->setOutputFormat(Format::FORMAT_TEXT_TEXT);
+    ->setOutputFile(__DIR__ . '/output/html-to-docx.docx')
+    ->setOutputFormat(Format::FORMAT_TEXT_DOCX);
 
-$result = $converter->convert($parameters);
+$converter->convert($parameters);
 
 // Example finish
 
 
-$html = '<pre>' . $result . '</pre>';
+$html = '<a href="output/html-to-docx.docx">html-to-docx.docx</a>';
 include __DIR__ . '/layout/layout.html';

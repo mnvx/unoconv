@@ -8,6 +8,12 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .vertical-align {
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,13 +21,41 @@
             <h1>Unoconv examples</h1>
             <p>Usage with PHP</p>
         </div>
-        <ul>
-            <li><a href="convert-html-from-stdin.php">Convert HTML (stdin) to text (stdout)</a></li>
-            <li><a href="convert-html-from-file.php">Convert HTML file to text (stdout)</a></li>
-            <li><a href="convert-pdf.php">Convert PDF file to HTML (stdout)</a></li>
-            <li><a href="convert-docx.php">Convert MS Word (docx) file to HTML (stdout)</a></li>
-            <li><a href="convert-docx-to-html-stdout.php">Convert MS Word (docx) file to HTML (stdout)</a></li>
-        </ul>
+
+        <form class="form-horizontal">
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/html.html">HTML</a> file to text (stdout)</span>
+                <a class="btn btn-default col-md-1" href="convert-html-from-file.php">Convert</a>
+            </div>
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/html.html">HTML</a> (stdin) to text (stdout)</span>
+                <a class="btn btn-default col-md-1" href="convert-html-from-stdin.php">Convert</a>
+            </div>
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/pdf.pdf">PDF</a> file to PNG image</span>
+                <a class="btn btn-default col-md-1" href="convert-pdf-from-file.php">Convert</a>
+            </div>
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/docx.docx">MS Word (docx)</a> file to HTML (stdout)</span>
+                <a class="btn btn-default col-md-1" href="convert-docx-from-file-stdin.php">Convert</a>
+            </div>
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/docx.docx">MS Word (docx)</a> file to HTML file</span>
+                <a class="btn btn-default col-md-1" href="convert-docx-from-file-html.php">Convert</a>
+            </div>
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/odt.odt">LO Writer (odt)</a> file to HTML (stdout)</span>
+                <a class="btn btn-default col-md-1" href="convert-odt-from-file.php">Convert</a>
+            </div>
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/html.html">HTML</a> (stdin) to MS Word (docx)</span>
+                <a class="btn btn-default col-md-1" href="convert-html-to-docx.php">Convert</a>
+            </div>
+            <div class="form-group vertical-align">
+                <span class="col-sm-3"><a href="data/html.html">HTML</a> (stdin) to LO Writer (odt)</span>
+                <a class="btn btn-default col-md-1" href="convert-html-to-odt.php">Convert</a>
+            </div>
+        </form>
     </div>
 </body>
 </html>

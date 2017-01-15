@@ -15,22 +15,18 @@ use Unoconv\Converter;
 use Unoconv\UnoconvParameters;
 use Unoconv\Format;
 
-$source = file_get_contents(__DIR__ . '/data/html.html');
-
-$converter = new Converter(
-    // Use last version for stdin with utf8 characters
-    //'/home/mnv/tmp/unoconv/unoconv-new'
-);
+$converter = new Converter();
 $converter->setLogger(new Logger());
 
 $parameters = (new UnoconvParameters())
-    ->setInputStream($source)
-    ->setOutputFormat(Format::FORMAT_TEXT_TEXT);
+    ->setInputFile(__DIR__ . '/data/pdf.pdf')
+    ->setOutputFile(__DIR__ . '/output/pdf-to-png.png')
+    ->setOutputFormat(Format::FORMAT_GRAPHICS_PNG);
 
-$result = $converter->convert($parameters);
+$converter->convert($parameters);
 
 // Example finish
 
 
-$html = '<pre>' . $result . '</pre>';
+$html = '<img src="output/pdf-to-png.png"/>';
 include __DIR__ . '/layout/layout.html';
