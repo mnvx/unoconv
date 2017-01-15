@@ -32,7 +32,7 @@ $converter->convert($parameters);
 
 ```
 sudo apt-get install unoconv
-composer require mnvx/unoconv:dev-master
+composer require mnvx/unoconv
 ```
 
 If you have problems with Unoconv utility, read instructions descibed 
