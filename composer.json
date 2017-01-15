@@ -1,8 +1,10 @@
 {
   "name": "mnvx/unoconv",
   "license": "MIT",
-  "type": "project",
+  "type": "library",
   "description": "Unoconv wrapper for PHP",
+  "keywords": ["unoconv"],
+  "homepage": "https://github.com/mnvx/unoconv",
   "autoload": {
     "psr-4": { "": "src/" }
   },
