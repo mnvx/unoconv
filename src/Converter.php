@@ -49,7 +49,7 @@ class Converter implements ConverterInterface
      */
     public function convert(UnoconvParameters $parameters)
     {
-        if (!in_array($parameters->getOutputFormat(), Format::getAvailableFormats(), true)) {
+        if ($parameters->getOutputFormat() && !in_array($parameters->getOutputFormat(), Format::getAvailableFormats(), true)) {
             throw new UnoconvException(sprintf('Unknown output format: ', $parameters->getOutputFormat()));
         }
 
@@ -58,7 +58,11 @@ class Converter implements ConverterInterface
         $format = $parameters->getOutputFormat() ? '--format=' . $parameters->getOutputFormat() : '';
         $command = $this->binaryPath . sprintf(' %s %s %s', $format, $output, $input);
 
-        $process = new Process($command);
+        $process = $this->createProcess($command);
+
+        if ($this->timeout) {
+            $process->setTimeout($this->timeout);
+        }
 
         // Convert from stdin
         if (!$parameters->getInputFile()) {
@@ -88,6 +92,15 @@ class Converter implements ConverterInterface
         }
 
         return $result;
+    }
+
+    /**
+     * @param $command
+     * @return Process
+     */
+    protected function createProcess(string $command): Process
+    {
+        return new Process($command);
     }
 
 }
